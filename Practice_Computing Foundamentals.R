@@ -1,9 +1,14 @@
-#Assign
+#Vector
+# 1) Vector keeps all the data in the same type
+# 2) Shortcut key to assign: Alt+-
 first_vector <- c(6, 1, 7)
 second_vector <- first_vector*3
 second_vector
 
 #Data type - numeric
+# How to convert double to integer? 
+# 1) assign <- as.integer() , OR
+# 2) add "L" after numbers
 numeric_vector <- c(6.171, 5.211)
 typeof(numeric_vector)
 typeof(first_vector)
@@ -24,3 +29,35 @@ factor_variable
 ordered_factor <- ordered(factor_variable, 
                           levels = c("freshman", "sophomore", "junior", "senior"), 
                           labels = c("freshman", "sophomore", "junior", "senior"))
+
+logical_vector <- c(TRUE, FALSE, TRUE, FALSE)
+logical_vector
+sum(logical_vector)
+
+#Matrix
+matrix_example <- matrix(data = c(1:9), ncol = 3, nrow = 3)
+matrix_example
+
+#Lists 
+# 1) don't forget , ""
+# 2) $ anchors value 
+list_example <- list(names = c("Skye", "MT"), 
+                     ages = c(23, 24), 
+                     height = c(68, 76))
+list_example
+list_example["names"]
+
+list_of_list <- list(girls = list(names = c("Skye", "Inderjeet"),
+                                  ages = c(23, 28), 
+                                  height = c(68, 70)),
+                     boys = list(names = c("MT", "CL"), 
+                                 ages = c(24, 24), 
+                                 height = c(74, 76)))
+list_of_list
+#Access values in list of list
+# Error: list_of_list[["girls",["names"]]]
+list_of_list$girls$names
+list_of_list |> 
+  getElement(1) |>
+  getElement("names")
+
