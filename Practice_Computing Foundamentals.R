@@ -61,3 +61,27 @@ list_of_list |>
   getElement(1) |>
   getElement("names")
 
+# Question 1: What's the difference between class() and typeof()??
+a <- 1
+b <- "lalal"
+
+typeof(a)
+class(a)
+
+typeof(b)
+class(b)
+
+lalala1 <- c(1, 2, 3)
+typeof(lalala1)
+class(lalala1)
+
+lalala2 <- matrix(1:9, nrow=3, ncol=3)
+lalala2
+class(lalala2)
+typeof(lalala2)
+
+# Question 2: 
+
+Q2 <- matrix(1:9, nrow=3, ncol=3)
+Q2 * 2
+Q2 %*% Q2
